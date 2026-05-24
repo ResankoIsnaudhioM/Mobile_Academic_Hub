@@ -1,12 +1,15 @@
 plugins {
     id("com.android.application") version "8.7.0" apply false
     id("org.jetbrains.kotlin.android") version "1.9.24" apply false
-    id("com.google.gms.google-services") version "4.4.1" apply false
     id("com.google.gms.google-services") version "4.4.4" apply false
 }
 buildscript {
     repositories {
         google()
         mavenCentral()
+    }
+    dependencies {
+        // Menambahkan classpath google-services agar skrip build mengenali plugin Firebase
+        classpath("com.google.gms:google-services:4.4.4")
     }
 }

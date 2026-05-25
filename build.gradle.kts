@@ -10,6 +10,7 @@ buildscript {
     }
     dependencies {
         // Menambahkan classpath google-services agar skrip build mengenali plugin Firebase
-        classpath("com.google.gms:google-services:4.4.4")
+        classpath("com.google.gms:google-services:4.4.4")implementation(platform("com.google.firebase:firebase-bom:33.1.0"))
+        implementation("com.google.firebase:firebase-auth")
     }
 }

@@ -18,7 +18,6 @@ class ScheduleViewModel : ViewModel() {
 
     private fun fetchScheduleItems() {
         viewModelScope.launch {
-            // Simulate fetching data from a repository or API
             _scheduleItems.value = listOf(
                 ScheduleItem("1", "Pemrograman Mobile", "Dr. Budi", "08:00", "10:00", "R. 301", "Senin"),
                 ScheduleItem("2", "Basis Data", "Prof. Ani", "10:00", "12:00", "R. 302", "Senin"),
